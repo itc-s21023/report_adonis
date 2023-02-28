@@ -23,4 +23,7 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/sample', 'ReportsController.index')
 Route.get('/student', 'StudentsController.index')
-
+Route.get('/absences', 'AbsencesController.index')
+  .as('absences.index.show')
+Route.get('/absences/add', 'AbsencesController.add')
+Route.post('/absences/add', 'AbsencesController.add_posted')
