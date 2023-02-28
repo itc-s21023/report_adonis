@@ -1,0 +1,23 @@
+@layout('layouts/main')
+
+@section('body')
+<p>{{message}}</p>
+
+<form action="{route('reports.index.post')}}" method="post">
+  <div class="mb-3">
+    <label for="msg" class="form-label">Message</label>
+    <input type="text" class="form-control" id="msg" name="msg">
+  </div>
+  <button type="submit" class="btn btn-secondary">送信</button>
+</form>
+@if (flashMessages.has('message'))
+<p class="text-success mb-4">{{ flashMessages.get('message')}}</p>
+@end
+<hr>
+<h5>※セッションの内容</h5>
+<ul class="list-group">
+  @each(item in list)
+  <li class="list-group-item">{{item}}</li>
+  @end
+</ul>
+@end
