@@ -23,3 +23,4 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/sample', 'ReportsController.index')
 Route.get('/student', 'StudentsController.index')
+
