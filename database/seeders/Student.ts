@@ -9,12 +9,12 @@ export default class extends BaseSeeder {
         code: 's21023'
       },
       {
-        name: 'seiga',
-        code: 's21010'
-      },
-      {
         name: 'yuito',
         code: 's21018'
+      },
+      {
+        name: 'seiga',
+        code: 's21010'
       }
     ])
   }
